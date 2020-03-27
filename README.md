@@ -49,10 +49,11 @@ In your project this will create:
 ### Creating Your S3 Config Secret for 3Scale
 
 To create your configuration secret you will need the following info:
-1: The public route URL for the `noobaa-endpoint` deployment.
-2: The `AWS_ACCESS_KEY_ID` from the new bucket `Secret`
-3: The `AWS_SECRET_ACCESS_KEY` from the new bucket `Secret`
-4: The bucket name from the ConfigMap.  It starts with the name you chose, but it's got a long identifier attached.
+
+1. The public route URL for the `noobaa-endpoint` deployment.
+2. The `AWS_ACCESS_KEY_ID` from the new bucket `Secret`
+3. The `AWS_SECRET_ACCESS_KEY` from the new bucket `Secret`
+4. The bucket name from the ConfigMap.  It starts with the name you chose, but it's got a long identifier attached.
 
 With this info in mind, create a secret like this:
 ```
