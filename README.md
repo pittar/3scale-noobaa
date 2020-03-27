@@ -6,7 +6,7 @@ These instructions are for my own exploration and shouldn't be taken as a suppor
 
 This has been tested on:
 * OpenShift Container Platform 4.3.5 (RHPDS)
-* 3Scale 2.8 deployed with the official Operator
+* 3Scale 2.8 deployed with the official Operator (Red Hat Integration - 3Scale, not the "Community" one)
 
 ### Install Noobaa Operator
 
@@ -52,7 +52,7 @@ To create your configuration secret you will need the following info:
 1: The public route URL for the `noobaa-endpoint` deployment.
 2: The `AWS_ACCESS_KEY_ID` from the new bucket `Secret`
 3: The `AWS_SECRET_ACCESS_KEY` from the new bucket `Secret`
-4: The name of the bucket you created (e.g. `3scale-bucket`)
+4: The bucket name from the ConfigMap.  It starts with the name you chose, but it's got a long identifier attached.
 
 With this info in mind, create a secret like this:
 ```
@@ -80,7 +80,7 @@ metadata:
 stringData:
   AWS_ACCESS_KEY_ID: UzmNcyUuHtsBZeYKaCvD
   AWS_SECRET_ACCESS_KEY: 8FrIYgJqjY1sygBSl9umg8h1rcR4xWPZ+ePiTlxH
-  AWS_BUCKET: 3scale-s3
+  AWS_BUCKET: 3scale-s3-2212ab03-6561-4588-ad07-73eb9ebd1754
   AWS_REGION: noobaa
   AWS_HOSTNAME: s3-3scale.apps.cluster-pitt-fde8.pitt-fde8.example.opentlc.com
   AWS_PROTOCOL: HTTPS
